@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Image} from 'react-native';
+import { View, Image, TouchableOpacity} from 'react-native';
 import Texto from './Texto';
 import logo from '../../assets/favicon.png';
 import { StyleSheet } from 'react-native';
 
-export default function Detalhes({ nome, logoFazenda, fazenda, descricao, preco }){
+export default function Detalhes({ nome, logoFazenda, fazenda, descricao, preco, botao }){
     return <>
         <Texto style={estilos.title}>{ nome}</Texto>
         
@@ -16,7 +16,11 @@ export default function Detalhes({ nome, logoFazenda, fazenda, descricao, preco 
                 </view>
                 <Texto style={estilos.descricao}>{ descricao}</Texto>
                 <texto style={estilos.preco}> {preco}</texto>
-            </view>
+
+            <TouchableOpacity style={estilos.botao} onPress={() => {}}>
+                <texto style={estilos.textoBotao}>{ botao }</texto>
+            </TouchableOpacity>
+          </view>
     </>
 }
 
@@ -56,5 +60,23 @@ const  estilos = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         marginTop: 8,
-    }
+    },
+
+    botao: {
+        marginTop: 16,
+        backgroundColor: "#2A9F85",
+        paddingVertical: 16,
+        borderRadius: 6,
+        alignItems: "center",
+        justifyContent: "center",
+
+    },
+
+    textoBotao: {
+        color: "white",
+        fontSize: 16,
+        lineHeight: 26,
+        fontWeight: "bold",
+        textAlign: "center",
+    },
 })
