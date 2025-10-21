@@ -1,5 +1,6 @@
 import { StyleSheet, image ,Dimensions, text, view } from 'react-native';
 import React from 'react';
+import Texto from '../componentes/Texto';
 import icon from '../../assets/adaptive-icon.png';
 import logo from '../../assets/favicon.png';
 
@@ -8,16 +9,16 @@ const width = Dimensions.get('screen').width;
 export default function Cesta(){
     return <>
     <image source={icon} style={estilos.icon}/>
-    <text style={estilos.title}>Detalhe da Cesta</text>
+    <Texto style={estilos.title}>Detalhe da Cesta</Texto>
 
     <view style={estilos.cesta}>
-        <text style={estilos.nome}>Cesta de Verduras</text>
+        <texto style={estilos.nome}>Cesta de Verduras</texto>
         <view style={estilos.fazenda}>
             <image source={logo} style={{width:32, height:32, borderRadius:16}}/>
-        <text style={estilos.nomeFazenda}>Jenny Jack Farm</text>
+        <texto style={estilos.nomeFazenda}>Jenny Jack Farm</texto>
         </view>
-        <text style={estilos.descricao}>Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha</text>
-        <text style={estilos.preco}>R$ 40,00</text>
+        <Texto style={estilos.descricao}>Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha</Texto>
+        <texto style={estilos.preco}>R$ 40,00</texto>
     </view>
     </>
 }
@@ -49,7 +50,7 @@ const estilos = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         color: "#464646",
-        fontFamily: "MontserratBold",
+        fontWeight: "bold",
     },
 
     fazenda: {
