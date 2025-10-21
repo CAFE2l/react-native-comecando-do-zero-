@@ -5,15 +5,19 @@ import icon from '../../assets/adaptive-icon.png';
 import logo from '../../assets/favicon.png';
 import Topo from '../../componentes/Topo';
 import Detalhes from '../../componentes/Detalhes';
+import Itens from '../../componentes/Itens';
+import Itens from '../Cesta/componentes/Itens';
+import { scrollView } from 'react-native';
 
 
-export default function Cesta({ topo, detalhes}){
-    return <>
+export default function Cesta({ topo, detalhes, itens}){
+    return <scrollView>
     <Topo {...topo}/>
 
     <image source={icon} style={estilos.icon}/>
-       <Detalhes {...detalhes} />
-    </>
+       <Detalhes {...detalhes} />   
+       <Itens {...itens}/>
+    </scrollView>
 }
 
 const estilos = StyleSheet.create({
