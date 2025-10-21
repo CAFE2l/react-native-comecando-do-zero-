@@ -26,6 +26,7 @@ const estilos = StyleSheet.create({
     icon: {
         width: "100vw",
         height: 578 / 768 * width,
+        fontFamily: "Monteserrat",
     },
 
     title: {
@@ -48,7 +49,7 @@ const estilos = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         color: "#464646",
-        fontWeight: "bold",
+        fontFamily: "MontserratBold",
     },
 
     fazenda: {
@@ -56,12 +57,13 @@ const estilos = StyleSheet.create({
         paddingVertical: 26,
         marginLeft: 12,
         alignItems: "center",
+        
     },
 
     nomeFazenda: {
         fontSize: 16,
         lineHeight: 26,
-
+        fontFamily: "MontserratRegular",
     },
 
     descricao:{
