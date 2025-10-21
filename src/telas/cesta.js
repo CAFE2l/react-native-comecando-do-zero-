@@ -1,4 +1,4 @@
-import { StyleSheet,Image,Dimensions, Text } from 'react-native';
+import { StyleSheet,Image,Dimensions, text, view } from 'react-native';
 import React from 'react';
 import icon from '../../assets/adaptive-icon.png';
 
@@ -7,7 +7,13 @@ const width = Dimensions.get('screen').width;
 export default function Cesta(){
     return <>
     <Image source={icon} style={estilos.icon}/>
-    <Text style={estilos.title}>Detalhe da Cesta</Text>
+    <text style={estilos.title}>Detalhe da Cesta</text>
+
+    <view>
+        <text>Cesta de Verduras</text>
+        <text>Jenny Jack Farm</text>
+        <text>Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha</text>
+    </view>
     </>
 }
 
