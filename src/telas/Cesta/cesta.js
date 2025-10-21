@@ -7,12 +7,12 @@ import Topo from '../../componentes/Topo';
 import Detalhes from '../../componentes/Detalhes';
 
 
-export default function Cesta(){
+export default function Cesta({ topo, detalhes}){
     return <>
-    <Topo />
+    <Topo {...topo}/>
 
     <image source={icon} style={estilos.icon}/>
-       <Detalhes />
+       <Detalhes {...detalhes} />
     </>
 }
 

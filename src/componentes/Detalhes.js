@@ -4,18 +4,18 @@ import Texto from './Texto';
 import logo from '../../assets/favicon.png';
 import { StyleSheet } from 'react-native';
 
-export default function Detalhes(){
+export default function Detalhes({ nome, logoFazenda, fazenda, descricao, preco }){
     return <>
-        <Texto style={estilos.title}>Detalhe da Cesta</Texto>
+        <Texto style={estilos.title}>{ nome}</Texto>
         
             <view style={estilos.cesta}>
-                <texto style={estilos.nome}>Cesta de Verduras</texto>
+                <texto style={estilos.nome}> </texto>
                 <view style={estilos.fazenda}>
-                    <image source={logo} style={{width:32, height:32, borderRadius:16}}/>
-                <texto style={estilos.nomeFazenda}>Jenny Jack Farm</texto>
+                    <image source={logoFazenda} style={{width:32, height:32, borderRadius:16}}/>
+                <texto style={estilos.nomeFazenda}>{ fazenda}</texto>
                 </view>
-                <Texto style={estilos.descricao}>Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha</Texto>
-                <texto style={estilos.preco}>R$ 40,00</texto>
+                <Texto style={estilos.descricao}>{ descricao}</Texto>
+                <texto style={estilos.preco}> {preco}</texto>
             </view>
     </>
 }
