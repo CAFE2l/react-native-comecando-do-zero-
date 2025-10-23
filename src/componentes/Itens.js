@@ -5,11 +5,12 @@ import { view } from 'react-native';
 import {image} from 'react-native';
 export default function Itens( title, lista){
     return <>
-        <Texto>{title}</Texto>
+        <Texto style={estilos.titulo}>{title}</Texto>
         {lista.itens.map(({nome, imagem }) => {
-            return <view>
-            <Texto key={nome}>{ nome }</Texto>
+            return <view style={estilos.item}>
             <image source={imagem} style={estilos.imagem}/>
+            <Texto key={nome} style={estilos.nome}>{ nome }</Texto>
+          
             </view>
         })}
     </>;
@@ -17,8 +18,32 @@ export default function Itens( title, lista){
 
 
 const estilos = StyleSheet.create({
-    imagem: {
-        width: 57,
-        height: 57,
+   title: {
+    color: "#464646",
+    fontWeight: "bold",
+    marginTop: 32,
+    marginBottom: 8,
+    fontSize: 20,
+    lineHeight: 32,
+
     },
-});
+
+    item:{
+        flexDirection:"row",
+        borderBottomWidth: 1,
+        borderBottomColor: "#ececec",
+        paddingVertical: 16,
+        alignItems: "center",
+    },
+    imagem:{
+        width: 46,
+        height: 46,
+    },
+    nome:{
+        fontSize: 16,
+        lineHeight: 26,
+        marginLeft: 11,
+        color: "#464646",
+    }
+    }   
+);
